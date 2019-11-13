@@ -12,3 +12,9 @@ cp -rf /etc/i3status.conf /home/files/i3wm/etc
 cp -rf /etc/xdg/compton.conf /home/files/i3wm/etc/xdg
 cp -rf /home/mybin/ /home/files/i3wm/
 echo "备份完成"
+
+cd /home/files/i3wm/
+git add .
+git commit -m "commit"
+git push origin master
+echo "上传完成"
