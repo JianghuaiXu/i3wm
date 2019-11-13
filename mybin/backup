@@ -1,0 +1,14 @@
+#!/bin/bash
+cp -rf /home/arch/.config/i3/config /home/files/i3wm/.config/i3/
+cp -rf /home/arch/.Xmodmap /home/files/i3wm/
+cp -rf /home/arch/.zshrc /home/files/i3wm
+cp -rf /home/arch/.xinitrc /home/files/i3wm
+cp -rf /etc/environment /home/files/i3wm
+cp -rf /etc/profile /home/files/i3wm
+cp -rf /etc/default/tlp /home/files/i3wm/etc/default
+cp -rf /etc/X11 /home/files/i3wm/etc
+cp -rf /boot/loader /home/files/i3wm/boot
+cp -rf /etc/i3status.conf /home/files/i3wm/etc
+cp -rf /etc/xdg/compton.conf /home/files/i3wm/etc/xdg
+cp -rf /home/mybin/ /home/files/i3wm/
+echo "备份完成"
