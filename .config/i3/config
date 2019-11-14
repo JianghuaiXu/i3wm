@@ -331,7 +331,7 @@ bindsym $mod+F12 mode "$mode_vas"
 set $mode_vas (m)music (v)vlc
 mode "$mode_vas" {
 	bindsym m exec --no-startup-id netease-cloud-music, mode "default"
-	bindsym v exec --no-startup-id vlc /home/arch/Documents/playlist.xspf, mode "default"
+	bindsym v exec --no-startup-id vlc /vlc /home/arch/Documents/iptvList/iptv.m3u, mode "default"
 	bindsym Return exec --no-startup-id netease-cloud-music, mode "default"
 	bindsym Escape mode "default"
 }
