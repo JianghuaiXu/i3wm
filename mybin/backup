@@ -17,5 +17,6 @@ cd /home/files/i3wm/
 git add .
 git commit -m "commit"
 git push github master
+echo "上传到github完成!"
 git push gitee master
-echo "上传完成"
+echo "上传到gitee完成!"
