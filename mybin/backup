@@ -3,8 +3,8 @@ cp -rf /home/arch/.config/i3/config /home/files/i3wm/.config/i3/
 cp -rf /home/arch/.Xmodmap /home/files/i3wm/
 cp -rf /home/arch/.zshrc /home/files/i3wm
 cp -rf /home/arch/.xinitrc /home/files/i3wm
-cp -rf /etc/environment /home/files/i3wm
-cp -rf /etc/profile /home/files/i3wm
+cp -rf /etc/environment /home/files/i3wm/etc/
+cp -rf /etc/profile /home/files/i3wm/etc/
 cp -rf /etc/default/tlp /home/files/i3wm/etc/default
 cp -rf /etc/X11 /home/files/i3wm/etc
 cp -rf /boot/loader /home/files/i3wm/boot
