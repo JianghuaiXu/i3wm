@@ -41,5 +41,5 @@ export LANGUAGE=zh_CN:en_US
 export LC_CTYPE=en_US.UTF-8
 exec libinput-gestures-setup start &
 exec fcitx &
-exec compton -b &
+exec compton --config /etc/xdg/compton.conf -b &
 exec i3
