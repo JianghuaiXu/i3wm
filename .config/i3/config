@@ -333,6 +333,7 @@ set $mode_vas (m)music (s)smplayer
 mode "$mode_vas" {
 	bindsym m exec --no-startup-id netease-cloud-music, mode "default"
 	bindsym s exec --no-startup-id smplayer /home/arch/Documents/iptvList/iptv.m3u, mode "default"
+	bindsym s exec --no-startup-id iease-music, mode "default"
 	bindsym Return exec --no-startup-id netease-cloud-music, mode "default"
 	bindsym Escape mode "default"
 }
