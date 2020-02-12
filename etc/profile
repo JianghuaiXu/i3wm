@@ -39,7 +39,7 @@ unset TERMCAP
 # Man is much better than us at figuring this out
 unset MANPATH
 
-alias setproxy="export ALL_PROXY=socks5://127.0.0.1:1080"
+alias setproxy="export ALL_PROXY=socks5://127.0.0.1:7891"
 alias unsetproxy="unset ALL_PROXY"
 alias myip="curl -i http://ip.sb"
 alias background=nitrogen

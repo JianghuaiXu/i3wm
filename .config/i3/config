@@ -290,13 +290,14 @@ mode "$mode_dev" {
 
 # 网络工具
 bindsym $mod+F2 mode "$mode_inter"
-set $mode_inter (c)chrome (s)ssr (b)baidunetdisk (t)telegram (u)uget
+set $mode_inter (c)chrome (s)ssr (l)clash (b)baidunetdisk (t)telegram (u)uget
 mode "$mode_inter" {
 	bindsym c exec --no-startup-id chromium, mode "default"
 	bindsym s exec --no-startup-id electron-ssr, mode "default"
 	bindsym b exec --no-startup-id baidunetdisk, mode "default"
 	bindsym t exec --no-startup-id telegram-desktop, mode "default"
 	bindsym u exec --no-startup-id uget-gtk, mode "default"
+	bindsym l exec --no-startup-id clash, mode "default" 
 	bindsym Return exec --no-startup-id chromium, mode "default"
 	bindsym Escape mode "default"
 }
