@@ -1,0 +1,3 @@
+#!/bin/bash
+cd /opt/xmind/XMind_amd64
+./XMind

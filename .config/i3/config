@@ -317,13 +317,14 @@ mode "$mode_wps" {
 
 # 阅读
 bindsym $mod+F6 mode "$mode_read"
-set $mode_read (p)pdf (g)goldendict (b)book (t)typora (w)wiznote
+set $mode_read (p)pdf (g)goldendict (b)book (t)typora (x)XMind (w)wiznote
 mode "$mode_read" {
 	bindsym	p exec --no-startup-id okular, mode "default"
 	bindsym b exec --no-startup-id com.github.babluboy.bookworm, mode "default"
 	bindsym t exec --no-startup-id typora, mode "default"
 	bindsym w exec --no-startup-id WizNote, mode "default"
 	bindsym g exec --no-startup-id goldendict, mode "default"
+	bindsym x exec --no-startup-id Xmind, mode "default"
 	bindsym Return exec --no-startup-id goldendict, mode "default"
 	bindsym Escape mode "default"
 }
