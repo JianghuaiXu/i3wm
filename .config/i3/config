@@ -304,13 +304,14 @@ mode "$mode_inter" {
 
 # 编辑工具
 bindsym $mod+F5 mode "$mode_wps"
-set $mode_wps (w)word (p)ppt (e)exel (f)pdf (g)gedit
+set $mode_wps (w)word (p)ppt (e)exel (f)pdf (c)cutpdf (g)gedit
 mode "$mode_wps" {
 	bindsym w exec --no-startup-id wps, mode "default"
 	bindsym p exec --no-startup-id wpp, mode "default"
 	bindsym e exec --no-startup-id et,mode "default"
 	bindsym f exec --no-startup-id wpspdf, mode "default"
 	bindsym g exec --no-startup-id gedit, mode "default"
+	bindsym c exec --no-startup-id java -jar /opt/briss-0.9/briss-0.9.jar, mode "default"
 	bindsym Return mode "default"
 	bindsym Escape mode "default"
 }
