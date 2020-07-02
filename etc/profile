@@ -39,7 +39,7 @@ unset TERMCAP
 # Man is much better than us at figuring this out
 unset MANPATH
 
-alias setproxy="export ALL_PROXY=socks5://127.0.0.1:7891"
+alias setproxy="export ALL_PROXY=socks5://192.168.2.101:7891"
 alias unsetproxy="unset ALL_PROXY"
 alias myip="curl -i http://ip.sb"
 alias background=nitrogen
@@ -57,3 +57,11 @@ alias ir=startx
 alias jd-gui="java -jar /usr/local/bin/jd-gui.jar"
 alias d2j-dex2jar="d2j-dex2jar.sh -f"
 alias battery="upower -i `upower -e | grep 'BAT'`"
+alias showinfo="cat /home/arch/Documents/Notes/info.text"
+alias writeinfo="vim /home/arch/Documents/Notes/info.text"
+alias mi5="sshpass -p 1222 ssh 192.168.2.101 -p 8022"
+alias vivo="sshpass -p 1222 ssh root@192.168.2.102"
+alias op3="sshpass -p 1222 ssh 192.168.2.100 -p 8022"
+alias mount-calibre="sudo mount -o gid=1000,uid=1000 -t davfs http://192.168.2.101:8085/remote.php/dav/files/admin/webdav/calibre/ /home/arch/Documents/calibre"
+alias mount-webdav="sudo mount -o gid=1000,uid=1000 -t davfs http://192.168.2.101:8085/remote.php/dav/files/admin/ /home/arch/Documents/webdav"
+alias mount-books="sudo mount -t cifs //192.168.2.101/books  /home/arch/Documents/smb/books -o username=root,password=1222,uid=0,gid=9997,iocharset=utf8,rw,dir_mode=0777,file_mode=0777,port=8084,nobrl"

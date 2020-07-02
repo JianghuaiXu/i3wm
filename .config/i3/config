@@ -290,43 +290,57 @@ mode "$mode_dev" {
 
 # 网络工具
 bindsym $mod+F2 mode "$mode_inter"
-set $mode_inter (c)chrome (s)ssr (l)clash (b)baidunetdisk (t)telegram (u)uget
+set $mode_inter (c)chrome (s)ssr (l)clash (b)baidunetdisk (t)telegram (e)thunderbird (u)uget
 mode "$mode_inter" {
 	bindsym c exec --no-startup-id chromium, mode "default"
 	bindsym s exec --no-startup-id electron-ssr, mode "default"
 	bindsym b exec --no-startup-id baidunetdisk, mode "default"
 	bindsym t exec --no-startup-id telegram-desktop, mode "default"
+	bindsym e exec --no-startup-id thunderbird, mode "default"
 	bindsym u exec --no-startup-id uget-gtk, mode "default"
 	bindsym l exec --no-startup-id clash, mode "default" 
 	bindsym Return exec --no-startup-id chromium, mode "default"
 	bindsym Escape mode "default"
 }
 
-# 编辑工具
+#小工具
+bindsym $mod+F4 mode "$mode_tools"
+set $mode_tools (g)goldendict (C)cutpdf (c)calibre (p)pdfarranger (s)scrcpy
+mode "$mode_tools" {
+	bindsym Shift+c exec --no-startup-id java -jar /opt/briss-0.9/briss-0.9.jar, mode "default"
+	bindsym c exec --no-startup-id calibre, mode "default"
+	bindsym g exec --no-startup-id goldendict, mode "default"
+	bindsym Return exec --no-startup-id goldendict, mode "default"
+	bindsym p exec --no-startup-id pdfarranger, mode "default"
+	bindsym s exec --no-startup-id scrcpy, mode "default"
+	bindsym Escape mode "default"
+}
+
+# 文字编辑
 bindsym $mod+F5 mode "$mode_wps"
-set $mode_wps (w)word (p)ppt (e)exel (f)pdf (c)cutpdf (g)gedit
+set $mode_wps (w)word (P)ppt (e)exel (f)pdf (t)typora (x)XMind (j)joplin (W)wiznote (g)gedit
 mode "$mode_wps" {
 	bindsym w exec --no-startup-id wps, mode "default"
-	bindsym p exec --no-startup-id wpp, mode "default"
+	bindsym Shift+p exec --no-startup-id wpp, mode "default"
 	bindsym e exec --no-startup-id et,mode "default"
-	bindsym f exec --no-startup-id wpspdf, mode "default"
+	bindsym p exec --no-startup-id wpspdf, mode "default"
 	bindsym g exec --no-startup-id gedit, mode "default"
-	bindsym c exec --no-startup-id java -jar /opt/briss-0.9/briss-0.9.jar, mode "default"
+	bindsym t exec --no-startup-id typora, mode "default"
+	bindsym Shift+w exec --no-startup-id WizNote, mode "default"
+	bindsym x exec --no-startup-id Xmind, mode "default"
+	bindsym j exec --no-startup-id JoplinDesktop.AppImage, mode "default"
 	bindsym Return mode "default"
 	bindsym Escape mode "default"
 }
 
 # 阅读
 bindsym $mod+F6 mode "$mode_read"
-set $mode_read (p)pdf (g)goldendict (b)book (t)typora (x)XMind (w)wiznote
+set $mode_read (p)pdf (b)book (c)chm 
 mode "$mode_read" {
 	bindsym	p exec --no-startup-id okular, mode "default"
 	bindsym b exec --no-startup-id com.github.babluboy.bookworm, mode "default"
-	bindsym t exec --no-startup-id typora, mode "default"
-	bindsym w exec --no-startup-id WizNote, mode "default"
-	bindsym g exec --no-startup-id goldendict, mode "default"
-	bindsym x exec --no-startup-id Xmind, mode "default"
-	bindsym Return exec --no-startup-id goldendict, mode "default"
+	bindsym c exec --no-startup-id xchm, mode "default"
+	bindsym Return mode "default"
 	bindsym Escape mode "default"
 }
 
@@ -397,6 +411,7 @@ exec --no-startup-id xfce4-power-manager
 exec --no-startup-id xautolock -time 10 -locker blurlock
 #exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id numlockx on
+exec_always --no-startup-id xinput set-prop "pointer:FocalTechPS/2 FocalTech Touchpad" "libinput Accel Speed" 0.8
 #exec --no-startup-id xfce4-panel --disable-wm-check
 #exec_always --no-startup-id touchpad
 

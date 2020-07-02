@@ -1,0 +1,19 @@
+#!/bin/bash
+
+if [ "$1" == "dis" ]
+then
+	adb shell pm disable-user com.duokan.einkreader
+	adb shell pm disable-user com.duokan.mireader
+	echo "duokan disabled!"
+elif [ "$1" == "wx" ]
+then
+	adb shell am start -n com.tencent.weread.eink/com.tencent.weread.LauncherActivity
+elif [ "$1" == "en" ]
+then
+	adb shell pm enable com.duokan.einkreader
+	adb shell pm enable com.duokan.mireader
+	echo "duokan enable"
+else
+	echo "dis/en 禁用/启用多看桌面   wx 启动微信阅读"
+fi
+
