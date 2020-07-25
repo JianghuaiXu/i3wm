@@ -277,13 +277,14 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # 开发工具
 bindsym $mod+F1 mode "$mode_dev"
-set $mode_dev (i)idea (e)eclipse (a)android-studio (v)vscode (d)dbeaver (t)typora
+set $mode_dev (i)idea (e)eclipse (a)android-studio (v)vscode (d)dbeaver (s)staruml
 mode "$mode_dev" {
 	bindsym i exec --no-startup-id /opt/Idea-IU/bin/idea.sh, mode "default"
 	bindsym e exec --no-startup-id /opt/eclipse/java-2019-092/eclipse/eclipse, mode "default"
 	bindsym v exec --no-startup-id code, mode "default"
 	bindsym d exec --no-startup-id /usr/share/dbeaver/dbeaver, mode "default"
 	bindsym a exec --no-startup-id android-studio, mode "default"
+	bindsym s exec --no-startup-id staruml, mode "default"
 	bindsym Return exec --no-startup-id /opt/Idea-IU/bin/idea.sh, mode "default" mode "default"
 	bindsym Escape mode "default"
 }

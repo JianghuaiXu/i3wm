@@ -1,0 +1,7 @@
+#!/bin/bash
+echo "清理系统中无用的包"
+sudo yay -R $(pacman -Qdtq)
+echo "清除已下载的安装包"
+sudo yay -Scc
+echo "崩溃日志删除"
+sudo rm /var/lib/systemd/coredump/*
